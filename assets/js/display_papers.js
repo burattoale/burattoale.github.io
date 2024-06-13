@@ -1,5 +1,5 @@
 // Load the JSON file
-fetch('list.json')
+fetch('/assets/js/papers/list.json')
     .then(response => response.json())
     .then(data => {
         // Get the container element where the blocks will be created
@@ -11,7 +11,7 @@ fetch('list.json')
         conferences.forEach(paper => {
             // Create a new block element
             const block = document.createElement('div');
-            block.classList.add('col-md-6 col-lg-4');
+            block.classList.add('col-md-6', 'col-lg-4');
             const innerBlock = document.createElement('div');
             innerBlock.classList.add('project-card-no-image');
             block.appendChild(innerBlock);
@@ -23,7 +23,7 @@ fetch('list.json')
 
             // Create the authors element
             const authors = document.createElement('h4');
-            authors.textContent = `Authors: ${paper.authors.join(', ')}`;
+            authors.textContent = `${paper.authors.join(', ')}`;
             innerBlock.appendChild(authors);
             // Add see more button
             const seeMore = document.createElement('a');
@@ -39,7 +39,6 @@ fetch('list.json')
             tags.classList.add('tags');
             const venue = document.createElement('a');
             venue.textContent = paper.name + ", " + paper.year;
-            venue.href = "#";
             tags.appendChild(venue);
             innerBlock.appendChild(tags);
 
@@ -53,7 +52,7 @@ fetch('list.json')
         const journalContainer = document.getElementById('journals');
         journals.forEach(paper => {
             const block = document.createElement('div');
-            block.classList.add('col-md-6 col-lg-4');
+            block.classList.add('col-md-6', 'col-lg-4');
             const innerBlock = document.createElement('div');
             innerBlock.classList.add('project-card-no-image');
             block.appendChild(innerBlock);
@@ -63,7 +62,7 @@ fetch('list.json')
             innerBlock.appendChild(title);
 
             const authors = document.createElement('h4');
-            authors.textContent = `Authors: ${paper.authors.join(', ')}`;
+            authors.textContent = `${paper.authors.join(', ')}`;
             innerBlock.appendChild(authors);
 
             const seeMore = document.createElement('a');
@@ -78,7 +77,6 @@ fetch('list.json')
             tags.classList.add('tags');
             const venue = document.createElement('a');
             venue.textContent = paper.name + ", " + paper.year;
-            venue.href = "#";
             tags.appendChild(venue);
             innerBlock.appendChild(tags);
 
