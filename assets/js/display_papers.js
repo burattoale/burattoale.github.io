@@ -1,5 +1,5 @@
 // Load the JSON file
-fetch('/assets/list.json')
+fetch('list.json')
     .then(response => response.json())
     .then(data => {
         // Get the container element where the blocks will be created
@@ -88,11 +88,3 @@ fetch('/assets/list.json')
     .catch(error => {
         console.error('Error loading papers:', error);
     });
-
-    <div class="col-md-6 col-lg-4">
-                        <div class="project-card-no-image">
-                            <h3>Adversarial jamming and catching games over AWGN channels with mobile players</h3>
-                            <h4>Giovanni Perin, Alessandro Buratto, Nicolo M Anselmi, Shruti Wagle, Leonardo Badia</h4><a class="btn btn-outline-primary btn-sm" role="button" href="https://drive.google.com/file/d/1zT9FchiwppQoUi7vf9gVvZ6-9ovItN63/view?usp=drive_link" target="_blank">See More</a>
-                            <div class="tags"><a href="#">IEEE Wimob, 2021</a></div>
-                        </div>
-                    </div>
